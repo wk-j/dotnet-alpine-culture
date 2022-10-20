@@ -1,9 +1,12 @@
 version: "3.1"
 
 services:
-  web:
+  ubuntu:
+    build:
+      context: .
+      dockerfile: docker/Ubuntu.Dockerfile
+
+  alpine:
     build:
       context: .
       dockerfile: docker/Dockerfile
-    ports:
-      - 8080:8080
